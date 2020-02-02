@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header.js';
-import Footer from './Footer';
+import Footer from './Footer.js';
 import Character from './Character.js';
 import martyImg from '../asset/58.jpeg';
 import martyImg1 from '../asset/128.jpeg';

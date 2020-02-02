@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './App.css';
+import styles from './Footer.css';
 
 const Footer = () => (
   <footer className={styles.Footer}>
@@ -9,7 +9,7 @@ const Footer = () => (
       <p>Episodes: 31</p>
     </section>
     <section className={styles.acknowledgment}>
-      <p>❮❯ by <a href="#">Axel Fuhrmann</a> 2020</p>
+      <p>❮❯ by <a href="#">samSterns</a> 2020</p>
     </section>
   </footer>
 );

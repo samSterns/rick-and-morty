@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import styles from './App.css';
+
 
 export default class Character extends Component {
     static propTypes = {
@@ -13,19 +15,37 @@ export default class Character extends Component {
 
     }
     render() {
-      const { characterName, status, species, gender, origin, location, img } = this.props;
+      const { status, species, gender, origin, location, img } = this.props;
       return (
         <>
-          <div>
-            <h1>{ characterName }</h1>
-            <h2>STATUS{ status }</h2>
-            <h3>SPECIES{ species }</h3>
-            <h3>GENDER { gender }</h3>
-            <h3>ORIGIN{ origin }</h3>
-            <h3>LAST
-            LOCATION{ location }</h3>
-            <img src= { img } />
-          </div>
+          <article className={styles.characterCard}>
+            <div className={styles.cardHeader}>
+              <img src={img} className={styles.charImg}></img>
+              <h2 className={styles.characterName}>{name}</h2>
+            </div>
+            <div className={styles.cardInfo}>
+              <div className={styles.stats}>
+                <span className={styles.span}>Status</span>
+                <p className={styles.pStat}>{status}</p>
+              </div>
+              <div className={styles.stats}>
+                <span className={styles.span}>Species</span>
+                <p className={styles.pStat}>{species}</p>
+              </div>
+              <div className={styles.stats}>
+                <span className={styles.span}>Gender</span>
+                <p className={styles.pStat}>{gender}</p>
+              </div>
+              <div className={styles.stats}>
+                <span className={styles.span}>Origin</span>
+                <p className={styles.pStat}>{origin}</p>
+              </div>
+              <div className={styles.stats}>
+                <span className={styles.span}>Last Location</span>
+                <p className={styles.pStat}>{location}</p>
+              </div>
+            </div>
+          </article>
         </>
       );
     }
